@@ -1,0 +1,29 @@
+$pri-color: #ed1c27;
+
+.starterkit-logo {
+    text-align: center;
+    max-width: 100%;
+    margin: 20px auto;
+    display: block;
+}
+
+.home-page {
+    margin-top: 30px;
+}
+
+.content {
+    margin: 0 auto;
+    padding: 0 5%;
+    max-width: 800px;
+}
+
+.highlight {
+    color: $pri-color;
+}
+
+@include respond-to($tablet) {
+    .starterkit-logo {
+        float: right;
+        width: 300px;
+    }
+}
