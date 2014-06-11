@@ -312,7 +312,7 @@ module.exports = function (grunt) {
             server: [
                 'sass',
                 'copy:css',
-                'assemble',
+                'assemble:server',
                 'jshint'
             ],
             test: [
