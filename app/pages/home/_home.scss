@@ -1,5 +1,25 @@
 .home-page {
 
+    .intro {
+        color: #fff;
+        position: relative;
+    }
+
+    @include respond-to($mobile) {
+        .intro {
+            &__img {
+                width: 100%;
+            }
+
+            &__text {
+                z-index: 1;
+                position: absolute;
+                bottom: 20px;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
     @include respond-to($tablet) {
     }
 }

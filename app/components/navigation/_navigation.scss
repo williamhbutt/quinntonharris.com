@@ -1,4 +1,14 @@
 .navigation {
+
+    background: rgba(200,200,200,0.5);
+    width: 94%;
+    margin: 0 auto;
+    height: 60px;
+    position: fixed;
+    left: 3%;
+    top: 3%;
+    z-index: 10;
+
     @include respond-to($tablet) {
     }
 }
