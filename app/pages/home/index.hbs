@@ -1,11 +1,24 @@
 <div class="js-page-controller-action home-page" data-action-name="home">
 
     <div class="intro">
-        <img class="intro__img" src="assets/images/intro--mobile.jpg" alt="woman">
+        <img class="intro__img mobile" src="assets/images/intro--mobile.jpg" alt="woman">
+        <img class="intro__img desktop" src="assets/images/intro--desktop.jpg" alt="woman">
         <div class="intro__text">
             <h2 class="title--small">BESTOWED WITH GRACE</h2>
             <h2 class="title--large">DRIVEN TO SHARE</h2>
             <img class="arrow" src="assets/images/arrow--down.png" alt="down arrow">
+        </div>
+    </div>
+
+    {{> about }}
+    {{> inspiration}}
+    {{> pages}}
+
+    <div class="share">
+        <div class="share__text">
+            <h5 class="share__title">SHARE YOUR STORY</h5>
+            <p class="share__description">I love you collaborate with great people. Contact me to exchange visions, support, and creative partnership.</p>
+            <a class="share__cta" href="#">Email me</a>
         </div>
     </div>
 </div>

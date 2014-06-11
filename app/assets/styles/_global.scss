@@ -7,5 +7,22 @@ body, html {
 }
 body {
     @include rem(font-size,1.6);
-    line-height: 1.4em;
+}
+
+@include respond-to($mobile) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+}
+
+@include respond-to($tablet) {
+    .desktop {
+        display: block;
+    }
+    .mobile {
+        display: none;
+    }
 }

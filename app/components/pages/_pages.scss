@@ -1,0 +1,63 @@
+.pages {
+
+    /**
+     * BASE COMPONENT STYLES HERE
+     * (common across all screen sizes)
+     */
+
+    /**
+     * SIZE-SPECIFIC MODIFICATIONS AND ENHANCEMENTS
+     * (start small and work up)
+     * baseline breakpoints are included, add more as needed
+     */
+
+    @include respond-to($mobile) {
+        padding: 50px 0px;
+        .page {
+            padding-left: 5%;
+            width: 70%;
+        }
+
+    }
+
+    @include respond-to($tablet) {
+        font-size: 0px;
+        padding: 0;
+        .page {
+            @include rem(font-size, 1.6);
+            width: 1/3 * 100%;
+            display: inline-block;
+            padding: 0;
+            height: 500px;
+            background-size: cover;
+            color: #fff;
+            position: relative;
+            &:nth-child(1) {
+                background-image: url('../images/page--stories.jpg');
+            }
+            &:nth-child(2) {
+                background-image: url('../images/page--journal.jpg');
+                .about__text {
+                    margin-left: 55%;
+                }
+            }
+            &:nth-child(3) {
+                background-image: url('../images/page--inspiration.jpg');
+            }
+            &__text {
+                width: 85%;
+                bottom: 20px;
+                left: 7.5%;
+                position: absolute;
+            }
+            &__title {
+                font-family: $serif;
+            }
+        }
+
+    }
+
+    @include respond-to($desktop) {
+
+    }
+}

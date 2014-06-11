@@ -1,0 +1,59 @@
+.about {
+
+    /**
+     * BASE COMPONENT STYLES HERE
+     * (common across all screen sizes)
+     */
+
+    /**
+     * SIZE-SPECIFIC MODIFICATIONS AND ENHANCEMENTS
+     * (start small and work up)
+     * baseline breakpoints are included, add more as needed
+     */
+    &__img {
+        width: 100%;
+    }
+
+    @include respond-to($mobile) {
+        &__text {
+            padding: 5%;
+        }
+
+    }
+
+    @include respond-to($tablet) {
+        &__section {
+            background-size: cover;
+            background-position-y: 50%;
+            &:nth-child(1) {
+                background-image: url('../images/about1--desktop.jpg');
+            }
+            &:nth-child(2) {
+                background-image: url('../images/about2--desktop.jpg');
+                .about__text {
+                    margin-left: 51%;
+                }
+            }
+            &:nth-child(3) {
+                background-image: url('../images/about3--desktop.jpg');
+            }
+        }
+        &__text {
+            padding: 100px 0px;
+            width: 49%;
+            background: rgba(255,255,255,0.8);
+        }
+        &__title, &__description {
+            padding: 0px 15%;
+        }
+        &__title {
+            font-family: $serif;
+        }
+
+
+    }
+
+    @include respond-to($desktop) {
+
+    }
+}
