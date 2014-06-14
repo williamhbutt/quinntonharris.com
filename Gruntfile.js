@@ -1,4 +1,4 @@
-// Generated on 2014-06-11 using
+// Generated on 2014-06-10 using
 // generator-starterkit 1.1.1
 
 'use strict';
@@ -21,6 +21,10 @@ module.exports = function (grunt) {
 
         // watches files for changes and runs tasks based on the changed files
         watch: {
+            options: {
+                livereload: true,
+                spawn: false
+            },
             bower: {
                 files: ['bower.json'],
                 tasks: ['wiredep']
@@ -32,18 +36,6 @@ module.exports = function (grunt) {
             styles: {
                 files: ['<%= pkg.app %>/assets/styles/{,*/}*.css'],
                 tasks: ['copy:css', 'autoprefixer']
-            },
-            livereload: {
-                options: {
-                    livereload: '<%= connect.options.livereload %>'
-                },
-                files: [
-                    '.tmp/*.html', //compiled html files from watch:assemble
-                    '.tmp/assets/styles/{,*/}*.css',
-                    '{.tmp,<%= pkg.app %>}/assets/**/*.js',
-                    '<%= pkg.app %>/assets/images/{,*/}*.*'
-                ],
-                tasks: ['notify:watch']
             },
             scripts : {
                 files: ['<%= pkg.app %>/**/*.js'],
@@ -312,7 +304,7 @@ module.exports = function (grunt) {
             server: [
                 'sass',
                 'copy:css',
-                'assemble:server',
+                'assemble',
                 'jshint'
             ],
             test: [
@@ -349,6 +341,9 @@ module.exports = function (grunt) {
             version: {
                 cwd : 'dist/',
                 command: 'touch version.txt'
+            },
+            createDistDir: {
+                command: 'mkdir -p dist'
             }
         },
 
@@ -401,6 +396,7 @@ module.exports = function (grunt) {
     ]);
     grunt.registerTask('build', [
         'clean:dist',
+        'exec:createDistDir',
         'wiredep',
         'concurrent:dist',
         'autoprefixer',
@@ -424,3 +420,4 @@ module.exports = function (grunt) {
         'build'
     ]);
 };
+
