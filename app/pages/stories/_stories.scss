@@ -1,0 +1,62 @@
+.stories {
+
+    /**
+     * BASE PAGE STYLES HERE
+     * (common across all screen sizes)
+     */
+
+    /**
+     * SIZE-SPECIFIC MODIFICATIONS AND ENHANCEMENTS
+     * (start small and work up)
+     * baseline breakpoints are included, add more as needed
+     */
+    .intro {
+        position: relative;
+        color: #fff;
+    }
+
+    @include respond-to($mobile) {
+        .intro {
+            &__img {
+                width: 100%;
+            }
+
+            &__text {
+                z-index: 1;
+                position: absolute;
+                bottom: 15px;
+                text-align: center;
+                width: 100%;
+            }
+
+            &__title {
+                @include rem(font-size, 2);
+                margin: 0;
+                padding-bottom: 15px;
+                font-family: $serif;
+                display: inline-block;
+                border-bottom: 1px solid;
+            }
+            &__description {
+                @include rem(font-size, $body-copy);
+                margin: 0;
+                padding-top: 15px;
+                margin-bottom: 20px;
+            }
+
+            .arrow {
+                display: block;
+                margin: 0 auto;
+                width: 50px;
+            }
+        }
+    }
+
+    @include respond-to($tablet) {
+
+    }
+
+    @include respond-to($desktop) {
+
+    }
+}

@@ -57,13 +57,14 @@
         &__text {
             padding: 100px 0px;
             width: 49%;
-            background: rgba(255,255,255,0.8);
+            background: rgba(255,255,255,0.9);
         }
         &__title, &__description {
-            padding: 0px 15%;
+            margin-left: 15%;
+            margin-right: 15%;
         }
         &__title {
-            font-family: $serif;
+            width: 70%;
         }
 
 
