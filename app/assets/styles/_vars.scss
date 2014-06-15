@@ -3,4 +3,50 @@ $mobile: 320px;
 $tablet: 768px;
 $desktop: 1024px;
 
-$serif: "Big Caslon", Perpetua, Baskerville, "Palatino Linotype", Palatino, "URW Palladio L", "Nimbus Roman No9 L", serif;
+$serif: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+
+$title-size: 2.8;
+$body-copy: 1.8;
+
+$gray--light: #797979;
+$gray--med: #666666;
+$gray--dark: #424242;
+$gray--very-dark: #333333;
+
+$peach: #ea7d74;
+
+@font-face {
+    font-family: 'proxima_nova_regular';
+    src: url('fonts/mark_simonson_-_proxima_nova_alt_thin-webfont.eot');
+    src: url('fonts/mark_simonson_-_proxima_nova_alt_thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/mark_simonson_-_proxima_nova_alt_thin-webfont.woff') format('woff'),
+         url('fonts/mark_simonson_-_proxima_nova_alt_thin-webfont.ttf') format('truetype'),
+         url('fonts/mark_simonson_-_proxima_nova_alt_thin-webfont.svg#proxima_nova_altthin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_nova_scosfthin';
+    src: url('fonts/mark_simonson_-_proxima_nova_scosf_thin-webfont.eot');
+    src: url('fonts/mark_simonson_-_proxima_nova_scosf_thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/mark_simonson_-_proxima_nova_scosf_thin-webfont.woff') format('woff'),
+         url('fonts/mark_simonson_-_proxima_nova_scosf_thin-webfont.ttf') format('truetype'),
+         url('fonts/mark_simonson_-_proxima_nova_scosf_thin-webfont.svg#proxima_nova_scosfthin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_novathin';
+    src: url('fonts/mark_simonson_-_proxima_nova_thin-webfont.eot');
+    src: url('fonts/mark_simonson_-_proxima_nova_thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/mark_simonson_-_proxima_nova_thin-webfont.woff') format('woff'),
+         url('fonts/mark_simonson_-_proxima_nova_thin-webfont.ttf') format('truetype'),
+         url('fonts/mark_simonson_-_proxima_nova_thin-webfont.svg#proxima_novathin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

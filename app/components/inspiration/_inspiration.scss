@@ -17,11 +17,34 @@
             background-image: url('../images/inspiration--mobile.jpg');
             background-size: cover;
             background-position-y: 50%;
-            padding: 100px 10%;
+            padding: 100px 3% 100px 5%;
+        }
+        &__quote {
+            @include rem(font-size, 3.3);
+            @include rem(line-height, 4.5);
+            font-family: $serif;
+            margin: 0;
+            &--small {
+                @include rem(font-size, 2.5);
+                border-bottom: 1px solid;
+                display:inline-block;
+                padding-bottom: 5px;
+            }
+        }
+        &__byline {
+            @include rem(font-size, 1.6);
+            margin-bottom: 0;
         }
         &__section--audio {
+            .inspiration__quote {
+                border-bottom: 1px solid;
+                padding-bottom: 10px;
+            }
             background: #000;
-            padding: 100px 10%;
+            padding: 60px 3% 60px 5%;
+        }
+        .dotted {
+            border-bottom: 1px dotted;
         }
     }
 

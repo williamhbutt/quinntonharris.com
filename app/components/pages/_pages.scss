@@ -12,10 +12,33 @@
      */
 
     @include respond-to($mobile) {
-        padding: 50px 0px;
+        padding: 0px 0px 50px 0px;
         .page {
             padding-left: 5%;
             width: 70%;
+            @include rem(font-size, $body-copy);
+            &__title {
+                font-family: $serif;
+                @include rem(font-size, $title-size);
+                @include rem(line-height, $title-size);
+                width: 95%;
+                color: $gray--med;
+                border-bottom: 1px solid $gray--very-dark;
+                margin: 0;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+                margin-top: 50px;
+            }
+            &__description {
+                color: $gray--very-dark;
+                margin: 0;
+                margin-bottom: 10px;
+            }
+            &__cta {
+                color: $gray--very-dark;
+                border-bottom: 1px dotted;
+                text-decoration: none;
+            }
         }
 
     }
@@ -49,9 +72,6 @@
                 bottom: 20px;
                 left: 7.5%;
                 position: absolute;
-            }
-            &__title {
-                font-family: $serif;
             }
         }
 

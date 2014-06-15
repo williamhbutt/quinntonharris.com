@@ -16,7 +16,23 @@
 
     @include respond-to($mobile) {
         &__text {
-            padding: 5%;
+            padding: 30px 5%;
+        }
+        &__title {
+            font-family: $serif;
+            @include rem(font-size, $title-size);
+            @include rem(line-height, $title-size);
+            color: $gray--light;
+            border-bottom: 1px solid $gray--med;
+            margin: 0;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            width: 80%;
+        }
+        &__description {
+            color: $gray--dark;
+            @include rem(font-size, $body-copy);
+            margin: 0;
         }
 
     }

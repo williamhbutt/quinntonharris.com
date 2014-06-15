@@ -14,21 +14,59 @@
             &__text {
                 z-index: 1;
                 position: absolute;
-                bottom: 20px;
+                bottom: 15px;
                 text-align: center;
                 width: 100%;
                 font-family: $serif;
+
+                .title--small {
+                    @include rem(font-size, 1.6);
+                    margin: 0;
+                    padding-bottom: 15px;
+                }
+                .title--large {
+                    @include rem(font-size, $title-size);
+                    border-top: 1px solid;
+                    margin: 0;
+                    padding-top: 15px;
+                    display: inline-block;
+                    margin-bottom: 20px;
+                }
+
+                .arrow {
+                    display: block;
+                    margin: 0 auto;
+                    width: 50px;
+                }
             }
         }
 
         .share {
             padding: 35px 0px;
+            background: $peach;
+            color: #fff;
             &__text {
                 width: 90%;
                 margin: 0 auto;
             }
             &__title {
                 font-family: $serif;
+                @include rem(font-size, 2.5);
+                display: inline-block;
+                border-bottom: 1px solid;
+                padding-bottom: 15px;
+                margin: 0;
+                margin-bottom: 15px;
+            }
+            &__description {
+                margin: 0;
+                @include rem(font-size, $body-copy);
+                margin-bottom: 15px;
+            }
+            &__cta {
+                color: #fff;
+                text-decoration: none;
+                border-bottom: 1px dotted;
             }
         }
     }
