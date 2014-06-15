@@ -1,0 +1,74 @@
+.story-previews {
+
+    /**
+     * BASE COMPONENT STYLES HERE
+     * (common across all screen sizes)
+     */
+
+    /**
+     * SIZE-SPECIFIC MODIFICATIONS AND ENHANCEMENTS
+     * (start small and work up)
+     * baseline breakpoints are included, add more as needed
+     */
+
+    @include respond-to($mobile) {
+        .story-list {
+            margin:0;
+            padding: 0;
+        }
+        .story {
+            display: block;
+            color: #fff;
+            margin: 0;
+            padding: 150px 0px;
+            text-align: center;
+            background-size: cover;
+            background-position-y: 50%;
+            &__title {
+                font-family: $serif;
+                @include rem(font-size, $title-size);
+                margin: 0;
+            }
+            &__subtitle {
+                margin: 0;
+                margin-top: 10px;
+            }
+            &.new {
+                background: #000;
+            }
+            &.white-girls {
+                background-image: url(../images/story-white--mobile.jpg);
+            }
+            &.fashionesta {
+                background-image: url(../images/story-fashion--mobile.jpg);
+            }
+            &.lacademie {
+                background-image: url(../images/story-lacademie--mobile.jpg);
+            }
+            &.quinton {
+                background-image: url(../images/story-quinton--mobile.jpg);
+            }
+            &.rise {
+                background-image: url(../images/story-rise--mobile.jpg);
+            }
+            &.austin {
+                background-image: url(../images/story-austin--mobile.jpg);
+            }
+            &.dorian {
+                background-image: url(../images/story-dorian--mobile.jpg);
+            }
+            &.sendiii {
+                background-image: url(../images/story-sendiii--mobile.jpg);
+            }
+        }
+
+    }
+
+    @include respond-to($tablet) {
+
+    }
+
+    @include respond-to($desktop) {
+
+    }
+}
