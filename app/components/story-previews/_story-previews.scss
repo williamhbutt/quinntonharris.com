@@ -65,6 +65,16 @@
     }
 
     @include respond-to($tablet) {
+        .story-list {
+            font-size: 0px;
+        }
+        .story {
+            width: 50%;
+            display: inline-block;
+            &__subtitle {
+                @include rem(font-size, 1.6);
+            }
+        }
 
     }
 

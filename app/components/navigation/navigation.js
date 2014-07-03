@@ -3,8 +3,12 @@
 var APP = window.APP = window.APP || {};
 
 APP.navigation = (function(){
-    var bindEventsToUI = function() {
 
+    var toggleNavDrawer = function() {
+        $('.nav-drawer').toggleClass('active');
+    };
+    var bindEventsToUI = function() {
+        $('.nav__burger').click(toggleNavDrawer);
     };
 
     var init = function() {

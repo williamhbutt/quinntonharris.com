@@ -286,9 +286,16 @@ module.exports = function (grunt) {
                         '.htaccess',
                         'assets/images/{,*/}*.{webp,gif}',
                         'assets/styles/fonts/{,*/}*.*',
-                        'assets/scripts/vendor/{,*/}*.js'
+                        'assets/scripts/vendor/{,*/}*.js',
+                        'assets/styles/**'
                     ]
                 }]
+            },
+            videoAssets: {
+                expand: true,
+                cwd: '<%= pkg.app %>/assets/styles/videoPlayer',
+                dest: '<%= pkg.dist %>/assets/styles/',
+                src: '**'
             },
             css: {
                 expand: true,
@@ -304,7 +311,7 @@ module.exports = function (grunt) {
             server: [
                 'sass',
                 'copy:css',
-                'assemble',
+                'assemble:server',
                 'jshint'
             ],
             test: [
@@ -313,6 +320,7 @@ module.exports = function (grunt) {
             dist: [
                 'sass',
                 'copy:css',
+                'copy:videoAssets',
                 'jshint',
                 'assemble:dist',
                 'imagemin',
@@ -420,4 +428,3 @@ module.exports = function (grunt) {
         'build'
     ]);
 };
-

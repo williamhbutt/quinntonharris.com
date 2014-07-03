@@ -1,15 +1,86 @@
 .navigation {
 
-    background: rgba(200,200,200,0.5);
+    background: rgba(255,255,255,0.7);
     width: 94%;
     margin: 0 auto;
     height: 60px;
     position: fixed;
     left: 3%;
-    top: 3%;
+    top: 20px;
     z-index: 10;
+
+    .nav__burger {
+        float: right;
+        margin-right: 20px;
+        margin-top: 14px;
+    }
 
     @include respond-to($tablet) {
         position: absolute;
+    }
+    @include respond-to($desktop) {
+        height: auto;
+        .nav__burger {
+            display: none
+        }
+
+        .nav__list {
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            vertical-align: baseline;
+            right: 20px;
+        }
+        .nav__item {
+            display: inline-block;
+        }
+        .nav__link {
+            text-decoration: none;
+            color: #666;
+            padding: 20px 10px;
+            @include rem(font-size, 2);
+        }
+    }
+}
+
+
+.nav-drawer {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 5;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    background: rgba(255,255,255,0.9);
+    transition: transform 300ms linear;
+    transform: translateY(-100%);
+
+    &.active {
+        transform: translateY(0%);
+    }
+
+    .drawer__list {
+        width: 80%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .drawer__item {
+        padding: 25px 0px;
+        display: block;
+        border-bottom: 1px #666 solid;
+        &:last-child {
+            border: none;
+        }
+
+    }
+    .drawer__link {
+        // TODO check color, vertically align the items
+        display: block;
+        color: #666;
+        text-decoration: none;
+        margin-left: 10px
     }
 }
