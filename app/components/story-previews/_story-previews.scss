@@ -65,6 +65,7 @@
     }
 
     @include respond-to($tablet) {
+        background: #000;
         .story-list {
             font-size: 0px;
         }
@@ -73,6 +74,23 @@
             display: inline-block;
             &__subtitle {
                 @include rem(font-size, 1.6);
+            }
+        }
+        .story__title, .story__subtitle {
+            visibility: hidden;
+        }
+        .story:hover {
+            border: 5px solid #fff;
+            box-sizing: border-box;
+            .story__title, .story__subtitle {
+                visibility: visible;
+            }
+        }
+        .story.new {
+            position: relative;
+            .story__subtitle {
+                width: 100%;
+                position: absolute;
             }
         }
 
