@@ -1,6 +1,6 @@
 .navigation {
 
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.9);
     width: 94%;
     margin: 0 auto;
     height: 60px;
@@ -39,7 +39,8 @@
             position: absolute;
             top: 50%;
             margin-top: -20px;
-            left: 35px;
+            left: 40px;
+            margin-left: 0px;
         }
 
         .nav__list {
@@ -47,7 +48,7 @@
             margin: 0;
             padding: 0;
             position: absolute;
-            right: 35px;
+            right: 40px;
             top: 50%;
             margin-top: -8px;
         }
@@ -55,10 +56,14 @@
             display: inline-block;
         }
         .nav__link {
+            font-family: 'proxima_nova_regular', MyriadPro, 'Myriad Pro', sans-serif;
             text-decoration: none;
             color: #666;
-            padding: 0px 20px;
-            @include rem(font-size, 1.8);
+            padding: 0px 40px;
+            @include rem(font-size, 1.6);
+            &:last-child {
+                padding-right: 0px;
+            }
         }
     }
 }
@@ -71,7 +76,7 @@
     z-index: 5;
     padding-top: 110px;
     padding-bottom: 30px;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.95);
     transition: transform 300ms linear;
     transform: translateY(-100%);
 
@@ -88,16 +93,17 @@
     .drawer__item {
         padding: 25px 0px;
         display: block;
-        border-bottom: 1px #666 solid;
+        border-bottom: 1px #b1afae solid;
         &:last-child {
             border: none;
         }
 
     }
     .drawer__link {
-        // TODO check color, vertically align the items
+        font-family: 'proxima_nova_regular', MyriadPro, 'Myriad Pro', sans-serif;
+        @include rem(font-size, 2.4);
         display: block;
-        color: #666;
+        color: $gray--med;
         text-decoration: none;
         margin-left: 10px
     }
