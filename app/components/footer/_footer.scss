@@ -1,0 +1,54 @@
+.footer {
+
+    /**
+     * BASE COMPONENT STYLES HERE
+     * (common across all screen sizes)
+     */
+
+    /**
+     * SIZE-SPECIFIC MODIFICATIONS AND ENHANCEMENTS
+     * (start small and work up)
+     * baseline breakpoints are included, add more as needed
+     */
+    // TODO check color
+    background: #000;
+    color: #fff;
+
+    @include respond-to($mobile) {
+        padding: 10px 0px;
+        .footer__social-links {
+            padding: 0;
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .link-wrapper {
+            display: inline-block;
+            padding: 0px 2px;
+        }
+        .link {
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px dotted #999;
+        }
+        .copyright {
+            text-align: center;
+        }
+
+    }
+
+    @include respond-to($tablet) {
+        text-align: center;
+        .footer__social-links {
+            display: inline-block;
+        }
+        .copyright {
+            display: inline-block;
+        }
+
+    }
+
+    @include respond-to($desktop) {
+
+    }
+}
