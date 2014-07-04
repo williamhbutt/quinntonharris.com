@@ -39,8 +39,10 @@
 
     @include respond-to($tablet) {
         text-align: center;
+        padding: 15px 0px;
         .footer__social-links {
             display: inline-block;
+            margin-bottom: 0px;
         }
         .copyright {
             display: inline-block;

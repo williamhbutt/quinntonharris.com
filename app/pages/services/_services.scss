@@ -1,0 +1,41 @@
+.services {
+
+    /**
+     * BASE PAGE STYLES HERE
+     * (common across all screen sizes)
+     */
+
+    /**
+     * SIZE-SPECIFIC MODIFICATIONS AND ENHANCEMENTS
+     * (start small and work up)
+     * baseline breakpoints are included, add more as needed
+     */
+
+    @include respond-to($mobile) {
+        background: $peach;
+        height: 100%;
+        padding: 200px 0px;
+        color: #fff;
+        font-family: $serif;
+        padding-left: 30px;
+
+        p {
+            padding: 0px;
+            margin: 0px;
+        }
+        hr {
+            width: 200px;
+            margin-left: 0;
+            border-style: solid;
+        }
+
+    }
+
+    @include respond-to($tablet) {
+
+    }
+
+    @include respond-to($desktop) {
+
+    }
+}
