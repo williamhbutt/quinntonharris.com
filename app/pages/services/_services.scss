@@ -28,10 +28,32 @@
             margin-left: 0;
             border-style: solid;
         }
+        .email {
+            border-bottom: 1px dotted;
+        }
 
     }
 
     @include respond-to($tablet) {
+        background-image: url('../images/services.jpg');
+        background-size: cover;
+
+        .services__list {
+            text-align: center;
+        }
+        hr {
+            margin-left: auto;
+            width: 500px;
+        }
+        .service {
+            display: inline-block;
+        }
+        .inquiry {
+            text-align: center;
+            p {
+                display: inline-block;
+            }
+        }
 
     }
 
