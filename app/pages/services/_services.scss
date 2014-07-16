@@ -16,21 +16,23 @@
 
     @include respond-to($mobile) {
         background: $peach;
-        height: 95%;
-        padding: 0px;
+        height: calc(100% - 70px);
         color: #fff;
         font-family: $serif;
-        padding-left: 30px;
-        .services__list {
-            padding-top: 200px
-        }
+        padding-left: 15px;
+        @include rem(font-size, 1.8);
 
         p {
             padding: 0px;
             margin: 0px;
+            margin-bottom: 5px;
+        }
+        .text-wrapper{
+            position: relative;
+            top: 35%;
         }
         hr {
-            width: 200px;
+            width: 225px;
             margin-left: 0;
             border-style: solid;
         }
@@ -44,18 +46,28 @@
         background-color: #000;
         background-image: url('../images/services.jpg');
         background-size: cover;
+        padding-left: 0;
+        text-align: center;
+        height: calc(100% - 50px);
+
+        .text-wrapper{
+            position: relative;
+            top: 65%;
+            display: inline-block;
+        }
 
         .services__list {
-            text-align: center;
+            @include rem(font-size, 2.2);
         }
         hr {
             margin-left: auto;
-            width: 500px;
+            width: auto;
         }
         .service {
             display: inline-block;
         }
         .inquiry {
+            @include rem(font-size, 2.8);
             text-align: center;
             p {
                 display: inline-block;

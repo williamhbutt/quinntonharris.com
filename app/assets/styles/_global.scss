@@ -10,6 +10,9 @@ body {
     @include rem(font-size,1.6);
 }
 
+.wrapper {
+    height:100%;
+}
 @include respond-to($mobile) {
     .desktop {
         display: none;
