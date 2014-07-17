@@ -36,7 +36,7 @@
             }
             &__cta {
                 color: $gray--very-dark;
-                border-bottom: 1px dotted;
+                border-bottom: 1px solid;
                 text-decoration: none;
             }
         }
@@ -45,6 +45,7 @@
 
     @include respond-to($tablet) {
         font-size: 0px;
+        font-weight: normal;
         padding: 0;
         .page {
             box-sizing: border-box;
@@ -86,6 +87,9 @@
             }
             &__cta {
                 color: #fff;
+                &:hover {
+                    color: $hover;
+                }
             }
         }
 

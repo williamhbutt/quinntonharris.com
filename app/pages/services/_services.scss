@@ -34,7 +34,10 @@
             border-style: solid;
         }
         .email {
-            border-bottom: 1px dotted;
+            border-bottom: 1px solid;
+            &:hover {
+                color: $hover;
+            }
         }
 
     }

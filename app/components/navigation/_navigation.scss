@@ -64,6 +64,9 @@
             &:last-child {
                 padding-right: 0px;
             }
+            &:hover {
+                color: $hover;
+            }
         }
     }
 }
