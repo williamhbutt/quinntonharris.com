@@ -72,12 +72,20 @@
         }
     }
     @include respond-to($tablet) {
+        height: 100%;
         .share {
             text-align: center;
             &__title {
                 padding-left: 10px;
                 padding-right: 10px;
             }
+        }
+        .intro {
+            background-image: url('../images/intro--desktop.jpg');
+            height: 100%;
+            background-size: cover;
+            background-position: 50% 0%;
+
         }
     }
 }
