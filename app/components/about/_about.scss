@@ -71,6 +71,9 @@
     }
 
     @include respond-to($desktop) {
+        &__text {
+            padding: 15% 0px;
+        }
 
     }
 }

@@ -66,18 +66,26 @@
             &__cta {
                 color: #fff;
                 text-decoration: none;
-                border-bottom: 1px dotted;
+                border-bottom: 1px solid;
                 @include rem(font-size, $body-copy);
             }
         }
     }
     @include respond-to($tablet) {
+        height: 100%;
         .share {
             text-align: center;
             &__title {
                 padding-left: 10px;
                 padding-right: 10px;
             }
+        }
+        .intro {
+            background-image: url('../images/intro--desktop.jpg');
+            height: 100%;
+            background-size: cover;
+            background-position: 50% 0%;
+
         }
     }
 }

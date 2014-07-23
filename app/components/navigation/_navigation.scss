@@ -11,24 +11,32 @@
     padding: 10px 0px;
 
     .nav__logo {
-        margin-top: 12px;
-        margin-left: 35px;
+        margin-top: 5px;
+        margin-left: 20px;
+        width: 200px
     }
 
     .nav__burger {
         float: right;
         margin-right: 20px;
-        margin-top: 14px;
+        margin-top: 9px;
     }
 
     .nav__list {
         display: none;
     }
+    @include respond-to(400px) {
+        .nav__logo {
+            margin-top: -5px;
+            margin-left: 35px;
+            width: 260px
+        }
+    }
 
     @include respond-to($tablet) {
         position: absolute;
     }
-    @include respond-to($desktop) {
+    @include respond-to(860px) {
         font-size: 0px;
         padding: 10px 0px;
         .nav__burger {
@@ -38,7 +46,7 @@
         .nav__logo {
             position: absolute;
             top: 50%;
-            margin-top: -20px;
+            margin-top: -35px;
             left: 40px;
             margin-left: 0px;
         }
@@ -64,6 +72,9 @@
             &:last-child {
                 padding-right: 0px;
             }
+            &:hover {
+                color: $hover;
+            }
         }
     }
 }
@@ -71,17 +82,20 @@
 
 .nav-drawer {
     position: fixed;
+    opacity: 0;
     width: 100%;
+    height: 100%;
     top: 0px;
     z-index: 5;
-    padding-top: 110px;
+    padding-top: 100px;
     padding-bottom: 30px;
     background: rgba(255,255,255,0.95);
-    transition: transform 300ms linear;
+    transition: transform 500ms ease, opacity 800ms ease;
     transform: translateY(-100%);
 
     &.active {
         transform: translateY(0%);
+        opacity: 1;
     }
 
     .drawer__list {
@@ -91,7 +105,7 @@
     }
 
     .drawer__item {
-        padding: 25px 0px;
+        padding: 20px 0px;
         display: block;
         border-bottom: 1px #b1afae solid;
         &:last-child {

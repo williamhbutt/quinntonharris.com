@@ -24,12 +24,17 @@
         }
         .link-wrapper {
             display: inline-block;
-            padding: 0px 2px;
+            padding: 0px 0px;
         }
         .link {
             color: #fff;
             text-decoration: none;
-            border-bottom: 1px dotted #999;
+            &:hover {
+                color: $hover;
+            }
+            &__slash {
+                padding: 0px 10px;
+            }
         }
         .copyright {
             text-align: center;
