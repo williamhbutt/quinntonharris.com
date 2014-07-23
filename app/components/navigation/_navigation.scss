@@ -36,7 +36,7 @@
     @include respond-to($tablet) {
         position: absolute;
     }
-    @include respond-to($desktop) {
+    @include respond-to(860px) {
         font-size: 0px;
         padding: 10px 0px;
         .nav__burger {
