@@ -11,8 +11,9 @@
     padding: 10px 0px;
 
     .nav__logo {
-        margin-top: 12px;
+        margin-top: -5px;
         margin-left: 35px;
+        width: 260px
     }
 
     .nav__burger {
@@ -38,7 +39,7 @@
         .nav__logo {
             position: absolute;
             top: 50%;
-            margin-top: -20px;
+            margin-top: -35px;
             left: 40px;
             margin-left: 0px;
         }
