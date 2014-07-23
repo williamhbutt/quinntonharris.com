@@ -5,6 +5,7 @@ body, html {
     width: 100%;
     font-size: 62.5%;
     font-family: 'proxima_novathin', MyriadPro, 'Myriad Pro', sans-serif;
+    font-weight: bold;
 }
 body {
     @include rem(font-size,1.6);
