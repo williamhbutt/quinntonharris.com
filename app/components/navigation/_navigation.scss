@@ -36,7 +36,7 @@
     @include respond-to($tablet) {
         position: absolute;
     }
-    @include respond-to(860px) {
+    @include respond-to(925px) {
         font-size: 0px;
         padding: 10px 0px;
         .nav__burger {
@@ -65,6 +65,7 @@
         }
         .nav__link {
             font-family: 'proxima_nova_regular', MyriadPro, 'Myriad Pro', sans-serif;
+            letter-spacing: 2px;
             text-decoration: none;
             color: #666;
             padding: 0px 40px;

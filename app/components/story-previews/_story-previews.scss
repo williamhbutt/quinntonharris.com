@@ -28,6 +28,7 @@
                 font-family: $serif;
                 @include rem(font-size, $title-size);
                 margin: 0;
+                letter-spacing: 2px;
             }
             &__overlay {
                 display: none;

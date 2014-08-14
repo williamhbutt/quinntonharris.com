@@ -14,14 +14,15 @@
     @include respond-to($mobile) {
         padding: 0px 0px 50px 0px;
         .page {
-            padding-left: 5%;
             width: 70%;
+            margin: 0 auto;
+            text-align: center;
             @include rem(font-size, $body-copy);
             &__title {
                 font-family: $serif;
+                letter-spacing: 2px;
                 @include rem(font-size, $title-size);
                 @include rem(line-height, $title-size);
-                width: 95%;
                 color: $gray--med;
                 border-bottom: 1px solid $gray--very-dark;
                 margin: 0;
@@ -36,8 +37,7 @@
             }
             &__cta {
                 color: $gray--very-dark;
-                border-bottom: 1px solid;
-                text-decoration: none;
+                text-decoration: underline;
             }
         }
 
@@ -49,6 +49,7 @@
         padding: 0;
         .page {
             box-sizing: border-box;
+            text-align: left;
             &:hover {
                 border: 7px solid #fff;
             }

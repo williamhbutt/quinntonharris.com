@@ -20,6 +20,7 @@
             padding: 100px 3% 100px 5%;
         }
         &__quote {
+            letter-spacing: 2px;
             @include rem(font-size, 3.3);
             @include rem(line-height, 4.5);
             font-family: $serif;
@@ -44,7 +45,15 @@
             padding: 60px 3% 60px 5%;
         }
         .dotted {
-            border-bottom: 1px solid;
+            text-decoration: underline;
+        }
+
+        &__audio {
+            margin-top: 15px;
+            width: 95%;
+        }
+        &__text {
+            text-align: center;
         }
     }
 
@@ -71,6 +80,18 @@
             background-position-x: 50%;
             background-position-y: 50%;
             background-size: cover;
+            text-align: center;
+
+            .inspiration__text {
+                display: inline-block;
+                width: auto;
+            }
+        }
+        &__audio {
+            margin-top: 30px;
+            margin-left: 20%;
+            margin-right: auto;
+            width: 60%;
         }
 
     }
