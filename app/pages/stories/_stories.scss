@@ -53,6 +53,12 @@
     }
 
     @include respond-to($tablet) {
+        .intro__img {
+            min-height: 300px;
+        }
+        .intro__title {
+            @include rem(font-size, 4.2);
+        }
 
     }
 

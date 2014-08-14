@@ -20,11 +20,13 @@
                 font-family: $serif;
 
                 .title--small {
+                    letter-spacing: 2px;
                     @include rem(font-size, 1.6);
                     margin: 0;
                     padding-bottom: 15px;
                 }
                 .title--large {
+                    letter-spacing: 2px;
                     @include rem(font-size, $title-size);
                     border-top: 1px solid;
                     margin: 0;
@@ -42,6 +44,7 @@
         }
 
         .share {
+            text-align: center;
             padding: 35px 0px;
             background: $peach;
             color: #fff;
@@ -50,6 +53,7 @@
                 margin: 0 auto;
             }
             &__title {
+                letter-spacing: 2px;
                 font-family: $serif;
                 @include rem(font-size, 2.5);
                 display: inline-block;
@@ -65,8 +69,8 @@
             }
             &__cta {
                 color: #fff;
-                text-decoration: none;
-                border-bottom: 1px solid;
+                text-decoration: underline;
+                /*border-bottom: 1px solid;*/
                 @include rem(font-size, $body-copy);
             }
         }
@@ -85,7 +89,12 @@
             height: 100%;
             background-size: cover;
             background-position: 50% 0%;
-
+            .title--small {
+                @include rem(font-size, 2.4);
+            }
+            .title--large {
+                @include rem(font-size, 4.2);
+            }
         }
     }
 }

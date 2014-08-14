@@ -28,7 +28,7 @@
         }
         .link {
             color: #fff;
-            text-decoration: none;
+            text-decoration: underline;
             &:hover {
                 color: $hover;
             }
