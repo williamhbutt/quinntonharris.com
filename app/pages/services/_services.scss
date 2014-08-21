@@ -40,6 +40,8 @@
             border-style: solid;
         }
         .email {
+            color: #fff;
+            text-decoration: none;
             border-bottom: 1px solid;
             &:hover {
                 color: $hover;
