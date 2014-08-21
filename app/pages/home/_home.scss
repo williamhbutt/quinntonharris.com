@@ -27,7 +27,7 @@
                 }
                 .title--large {
                     letter-spacing: 2px;
-                    @include rem(font-size, $title-size);
+                    @include rem(font-size, 2.6);
                     border-top: 1px solid;
                     margin: 0;
                     padding-top: 15px;
@@ -75,6 +75,15 @@
             }
         }
     }
+    @include respond-to(400px) {
+        .title--large {
+            @include rem(font-size, $title-size);
+        }
+        .title--small {
+            @include rem(font-size, 1.8);
+        }
+
+    }
     @include respond-to($tablet) {
         height: 100%;
         .share {
@@ -89,12 +98,6 @@
             height: 100%;
             background-size: cover;
             background-position: 50% 0%;
-            .title--small {
-                @include rem(font-size, 2.4);
-            }
-            .title--large {
-                @include rem(font-size, 4.2);
-            }
         }
     }
 }

@@ -34,6 +34,7 @@
                 z-index: 1;
             }
             &__overlay {
+                font-family: $serif;
                 display: none;
                 display: block;
                 font-size: 28px;
@@ -44,6 +45,7 @@
                 top: 0;
                 background: rgba(0,0,0,0.5);
                 color: transparent;
+                letter-spacing: 2px;
             }
             &__subtitle {
                 margin: 0;
